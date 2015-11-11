@@ -33,7 +33,7 @@ module OpenProject::Revisions
 
         def bulk_update_with_revisions(&block)
           # Do actual update
-          update_without_revisions(&block)
+          bulk_update_without_revisions(&block)
           call_hook(:roles_changed, :message => 'updated (bulk)')
         end
 
